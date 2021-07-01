@@ -22,7 +22,6 @@ function Main() {
     try {
       let cookie = Cookies.get('user');
       if (cookie) {
-        console.log('jagos dupli vrogos')
         let user = await axios.get('/api/auth/verifying-cookie');
         await dispatch({
           type: SET_CURRENT_USER,
@@ -33,7 +32,7 @@ function Main() {
           type: GET_ALL_POSTS,
           posts: posts
         })
-        console.log(JSON.parse(Cookies.get('path')), 'aaaaa')
+        // console.log(JSON.parse(Cookies.get('path')), 'aaaaa')
         history.push(JSON.parse(Cookies.get('path')))
       }
     } catch (err) {

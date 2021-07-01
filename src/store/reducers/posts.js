@@ -3,7 +3,7 @@ import Cookie from 'js-cookie';
 
 const DEFAULT_STATE = {
   postsList: { vehicles: [], realEstate: [], freeStuff: [], electronics: [], musicalInstruments: [], gamesAndToys: [], householdSupplies: [], family: [], pets: [], homeDecorationSupplies: [], sports: [], fun: [] },
-  categories: ['Apartments & Flats', 'Free stuff', 'Electronics'],
+  categories: ['Apartments & Flats', 'Free stuff', 'Computer & related'],
   postForm: {
     imageUrl: [],
     title: '',
@@ -22,10 +22,7 @@ const filteringCategories = (posts) => {
   const filteredData = { vehicles: [], realEstate: [], freeStuff: [], electronics: [], musicalInstruments: [], gamesAndToys: [], householdSupplies: [], family: [], pets: [], homeDecorationSupplies: [], sports: [], fun: [] }
   posts.forEach(val => {
     switch (val.category[0]) {
-      case 'Vehicles':
-        filteredData.vehicles.push(val);
-        break
-      case 'Real estate':
+      case 'Apartments & Flats':
         filteredData.realEstate.push(val);
         break
       case 'Free stuff':
@@ -33,30 +30,6 @@ const filteringCategories = (posts) => {
         break
       case 'Electronics' || 'electronics':
         filteredData.electronics.push(val);
-        break
-      case 'Musical instruments':
-        filteredData.musicalInstruments.push(val);
-        break
-      case 'Games and toys':
-        filteredData.gamesAndToys.push(val);
-        break
-      case 'Household supplies':
-        filteredData.householdSupplies.push(val);
-        break
-      case 'Family':
-        filteredData.family.push(val);
-        break
-      case 'Home decoration supplies':
-        filteredData.homeDecorationSupplies.push(val);
-        break
-      case 'Sports':
-        filteredData.sports.push(val);
-        break
-      case 'Fun':
-        filteredData.fun.push(val);
-        break
-      case 'Pets':
-        filteredData.pets.push(val);
         break
       default:
         break
