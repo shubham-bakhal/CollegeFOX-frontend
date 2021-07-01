@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux';
 import { SET_CURRENT_USER, GET_ALL_POSTS } from '../store/actionTypes';
 import { callApi } from '../store/actions/api';
 import { useHistory } from 'react-router-dom';
+import LandingPage from '../LandingPage/LandingPage';
 
 function Main() {
 
@@ -49,7 +50,10 @@ function Main() {
       <Switch>
         <Route exact path='/' render={props => (
           isLoggedin ? <Homepage {...props} /> : <Redirect to="/signin" />
-        )} />
+          )} />
+          <Route exact path='/home' render={props => (
+            !isLoggedin ? <LandingPage /> : <Redirect to="/" />
+          )} />
         <Route path="/signup" render={props => (
           isLoggedin ? <Redirect to="/" /> : <AuthForm buttonText="Signup" signup={true} {...props} />
         )} />

@@ -21,13 +21,13 @@ export default function Navbar() {
 
   return (
     <nav className="navbar sticky-top navbar-light bg-light pad2">
-      <Link to="/" className="navbar-brand" onClick={e => dispatch({ type: CHANGE_PATH, history: { path: '/', class: 'all' } })} 
+      <Link to="/home" className="navbar-brand" onClick={e => dispatch({ type: CHANGE_PATH, history: { path: '/', class: 'all' } })} 
       style={{
         "fontWeight":"700"
 
       }}
       >
-        College<span style={{"color":"#4338CA"}}> Fox </span>
+        College<span style={{"color":"orangered"}}> Fox </span>
       </Link>
 
       {!isLoggedin ? (
