@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <nav className="navbar sticky-top navbar-light bg-light pad2">
       <Link to="/" className="navbar-brand" onClick={e => dispatch({ type: CHANGE_PATH, history: { path: '/', class: 'all' } })}>
-        Marketplace
+        CollegeFox
       </Link>
 
       {!isLoggedin ? (
