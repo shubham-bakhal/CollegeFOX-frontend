@@ -38,7 +38,7 @@ function ImagesDisplayer({ data }) {
   return (
     <div className="image-displayer-container">
       <div className="background-image-container">
-        <img className="background-image" src={data.imageUrl[imageCounter]} alt="err" />
+        <img className="background-image" src={data.imageUrl[imageCounter]} alt="Image" />
       </div>
       {mainImage}
       <div className="all-images">

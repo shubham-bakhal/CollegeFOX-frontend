@@ -186,13 +186,13 @@ function PostForm({ update, data }) {
     <div style={{ marginTop: '30px' }}>
       <form onSubmit={onSubmit} encType="multipart/form-data" action="/upload">
         <div className="form-group ">
-          <p className="photo-input-warning">Photos :  {formData.imageUrl.length} / 10 - You can add no more then 10 photos.</p>
+          <p className="photo-input-warning">Photos :  {formData.imageUrl.length} / 10 - You cannot add more than 10 photos.</p>
           <div className="photo-input-empty">
             {formData.imageUrl.length === 0 ? (
               <>
                 <label htmlFor="photo-input"><div className="photo-input-continer"><div className="add-photo-button-empty"><AddToPhotosIcon style={{ marginRight: '5px' }} />Add New Photo</div></div></label>
                 <input type="file" accept=".jpg, .jpeg, .png, .gif, .tiff, .psd, .eps, .ai, .raw, .indd" className="form-control-file file-input" id="photo-input" onChange={addingPhotos} />
-                <p className="warning-create-post">Adding at least 1 photo is required</p>
+                <p className="warning-create-post">* At least 1 photo is required</p>
               </>
             ) : (
                 <div className="img-preview-sidebar-container">
@@ -216,7 +216,7 @@ function PostForm({ update, data }) {
           <label htmlFor="price-input">Price</label>
           <div style={{ display: 'flex' }}>
             <input type="text" className={`form-control ${errForm.price.outline}`} id="price-input" value={formData.price} onChange={e => changingInput(e, 'price')} />
-            <h4 style={{ margin: '2px 0 0 5px', }}>EUR</h4>
+            <h4 style={{ margin: '2px 0 0 5px', }}>INR</h4>
           </div>
           <p style={{ color: 'red' }} className='warning-create-post'>{errForm.price.message}</p>
         </div>

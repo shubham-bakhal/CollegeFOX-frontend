@@ -49,7 +49,7 @@ function AuthForm(props) {
         setOutlineData = { ...setOutlineData, password: 'is-invalid' }
       }
       if (!formData.repeatPassword) {
-        setErrorData = { ...setErrorData, repeatPassword: "Repeating password is required" }
+        setErrorData = { ...setErrorData, repeatPassword: "Confirm password is required" }
         setOutlineData = { ...setOutlineData, repeatPassword: 'is-invalid' }
       }
       if (!formData.email) {
@@ -207,12 +207,14 @@ function AuthForm(props) {
         <small>{errMessages.loginFailed}</small>
         {props.signup ? (
           <div className="form-group">
+            <span className="signup-header">SIGN UP </span>
             <label htmlFor="username-label">Username</label>
             <input type="text" className={`form-control ${errOutline.username}`} id="username-label" value={formData.username} onChange={e => onChangeUsername(e)} />
             <small id="usernameHelp" className="form-text text-muted">{errMessages.username}</small>
           </div>
-        ) : null}
+        ) : <span className="login-header">LOG IN </span> }
         <div className="form-group">
+        {/* <span className="signup-header">LOG IN </span> */}
           <label htmlFor="email-label">Email address</label>
           <input type="email" className={`form-control ${errOutline.email}`} id="email-label" aria-describedby="emailHelp" value={formData.email} onChange={emailOnChange} />
           <small id="emailHelp" className="form-text text-muted">{errMessages.email}</small>
@@ -225,15 +227,15 @@ function AuthForm(props) {
         {props.signup ? (
           <>
             <div className="form-group">
-              <label htmlFor="password-label">Repeat Password</label>
+              <label htmlFor="password-label">Confirm Password</label>
               <input type="password" className={`form-control ${errOutline.repeatPassword}`} id="password-label" value={formData.repeatPassword} onChange={e => changingRepeatPasswords(e)} />
               <small id="emailHelp" className="form-text text-muted">{errMessages.repeatPassword}</small>
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="imageUrl-label">Image Url</label>
               <input type="text" className="form-control" id="imageUrl-label" value={formData.profileImageUrl} onChange={e => setFormData({ ...formData, profileImageUrl: e.target.value })} />
               <p style={{ color: "#6c757d !important", textAlign: "start", fontSize: "12px" }} id="imageUrlHelp" className="form-text text-muted">Not required</p>
-            </div>
+            </div> */}
           </>
         ) : null}
         <button id="auth-submit" type="submit" className="btn btn-primary mt-2">{props.buttonText}</button>

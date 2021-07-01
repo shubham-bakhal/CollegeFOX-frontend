@@ -46,10 +46,10 @@ function Search({ handleCategoryClick, selectedClass, setChooseCategoryPopup, ch
         }}>Sell</Link>
         <p className="search-link" onClick={e => setChooseCategoryPopup(true)}>Categories</p>
       </div>
-      <h3 style={{ textAlign: 'start', paddingLeft: '5px' }}>Marketplace</h3>
+      <h3 style={{ textAlign: 'start', paddingLeft: '5px' }}></h3>
       <div className="sidebar-search">
         <SearchIcon color='action' />
-        <input placeholder="Search marketplace" value={inputValue} onChange={searchOnChange} />
+        <input placeholder="Search CollegeFox" value={inputValue} onChange={searchOnChange} style={{"outline":"none"}}/>
       </div>
       <Modal className="category-popup" isOpen={chooseCategoryPopup} >
         <div className="category-popup-container">

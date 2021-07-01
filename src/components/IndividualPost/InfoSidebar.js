@@ -30,7 +30,7 @@ function InfoSidebar({ data }) {
   return (
     <div className="info-sidebar-container">
       <h3 style={{ marginBottom: '2px', textAlign: 'start' }}>{data.title}</h3>
-      <p style={{ fontSize: '17px', marginBottom: '0' }}>{data.price} €</p>
+      <p style={{ fontSize: '17px', marginBottom: '0' }}>{data.price} ₹</p>
       <small>{data.category[0]}</small>
       <hr></hr>
       {data.description ? (

@@ -21,19 +21,24 @@ export default function Navbar() {
 
   return (
     <nav className="navbar sticky-top navbar-light bg-light pad2">
-      <Link to="/" className="navbar-brand" onClick={e => dispatch({ type: CHANGE_PATH, history: { path: '/', class: 'all' } })}>
-        CollegeFox
+      <Link to="/" className="navbar-brand" onClick={e => dispatch({ type: CHANGE_PATH, history: { path: '/', class: 'all' } })} 
+      style={{
+        "fontWeight":"700"
+
+      }}
+      >
+        College<span style={{"color":"#4338CA"}}> Fox </span>
       </Link>
 
       {!isLoggedin ? (
         <ul className="navbar-nav flex-row">
           <li className="nav-item mr-4">
-            <Link className="nav-link" to="/signup">
+            <Link className="nav-link" to="/signup" id="signUp-btn">
               Sign up
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/signin">
+            <Link className="nav-link" to="/signin" id="logIn-btn">
               Login
             </Link>
           </li>
@@ -41,7 +46,7 @@ export default function Navbar() {
       ) : (
           <ul className="navbar-nav flex-row">
             <li className="nav-item mr-1">
-              <Link className="nav-link" to="/signin" onClick={e => loggingOutUser(e)}>
+              <Link className="nav-link" to="/signin" onClick={e => loggingOutUser(e)} id="logOut-btn">
                 Logout
               </Link>
             </li>

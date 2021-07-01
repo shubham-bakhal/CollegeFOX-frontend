@@ -1,7 +1,8 @@
 .create-post-button{
   border: none;
   width: 100%;
-  background-color: #E7F3FF;
+  /* background-color: #E7F3FF; */
+  background-color: #E0E7FF;
   padding: 8px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,10 +22,11 @@
 
 .create-post-button > div{
   margin-bottom: 2px;
-  color: #1377E8;
+  color: #4F46E5;
 }
 
 .create-post-button:hover{
-  background-color: #DAE6F2;
+  background-color: #A5B4FC;
+  color: #4F46E5;
   text-decoration: none;
 }

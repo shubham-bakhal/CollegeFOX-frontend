@@ -3,7 +3,7 @@ import Cookie from 'js-cookie';
 
 const DEFAULT_STATE = {
   postsList: { vehicles: [], realEstate: [], freeStuff: [], electronics: [], musicalInstruments: [], gamesAndToys: [], householdSupplies: [], family: [], pets: [], homeDecorationSupplies: [], sports: [], fun: [] },
-  categories: ['Vehicles', 'Real estate', 'Free stuff', 'Electronics', 'Musical instruments', 'Games and toys', 'Household supplies', 'Family', 'Pets', 'Home decoration supplies', 'Sports', 'Fun'],
+  categories: ['Apartments & Flats', 'Free stuff', 'Electronics'],
   postForm: {
     imageUrl: [],
     title: '',

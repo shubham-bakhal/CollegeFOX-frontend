@@ -3,6 +3,7 @@
   height: 44px;
   border-radius: 20px;
   background-color: #F0F2F5;
+  /* background-color: #eef2ff; */
   padding: 5px 25px 5px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,6 +12,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 10px;
+  outline: none;
 }
 
 .sidebar-search > input{
@@ -144,7 +146,7 @@
   }
 
   .search-icons .selected-category {
-    background-color: #1877F2;
+    background-color: #4F46E5;
   }
 
   .selected-category path{

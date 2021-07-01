@@ -4,6 +4,15 @@
           box-shadow: 0 0 18px rgba(0, 0, 0, .1) !important;
 }
 
+#logOut-btn, #signUp-btn{
+  border: 2px solid #6366f1;
+  width: 5rem;
+  /* background-color: #6366f1; */
+  border-radius: 4px;
+  /* color: white; */
+}
+
+
 .bg-light{
   background-color: #FFFFFF !important;
 }

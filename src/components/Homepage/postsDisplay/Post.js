@@ -16,7 +16,7 @@ function Post({ data }) {
   useEffect(() => {
     if (currentUser.bookmarks === undefined) return;
     if (currentUser.bookmarks.some(val => val === data._id)) {
-      setBookmarkedClass({ backgroundColor: '#1878EE', color: 'white', opacity: '1' })
+      setBookmarkedClass({ backgroundColor: '#6366f1', color: 'white', opacity: '1' })
     }
   }, [data])
 
@@ -38,7 +38,7 @@ function Post({ data }) {
   const addBookmark = async () => {
     let foundUser = await callApi('post', `/api/users/${currentUser.id}/posts/add-bookmark`, { postId: data._id }, currentUser.token);
     await dispatch({ type: ADD_BOOKMARK, bookmarks: foundUser.bookmarks })
-    setBookmarkedClass({ backgroundColor: '#1878EE', color: 'white', opacity: '1' })
+    setBookmarkedClass({ backgroundColor: '#6366f1', color: 'white', opacity: '1' })
   }
 
   return (
