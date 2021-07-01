@@ -1,0 +1,16 @@
+.navbar{
+  padding: 0.8rem 2rem;
+  -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, .1) !important;
+          box-shadow: 0 0 18px rgba(0, 0, 0, .1) !important;
+}
+
+.bg-light{
+  background-color: #FFFFFF !important;
+}
+
+@media all and (max-width: 900px){
+  .navbar{
+    -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, .2) !important;
+            box-shadow: 0 0 18px rgba(0, 0, 0, .2) !important;
+  }
+}

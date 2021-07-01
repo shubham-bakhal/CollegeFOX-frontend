@@ -1,0 +1,41 @@
+.auth-form{
+  width: 600px;
+  background-color: rgba(0, 0, 0, .03);
+  padding: 40px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+          box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+}
+
+.auth-form-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.auth-form small{
+  text-align: start;
+}
+
+.form-group{
+  display: -ms-grid;
+  display: grid;
+}
+
+.form-group label{
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+#auth-submit{
+  width: 20%;
+  min-width: 80px;
+}
+
+.auth-form small{
+  color: red !important;
+}

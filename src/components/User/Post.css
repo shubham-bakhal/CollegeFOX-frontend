@@ -1,0 +1,180 @@
+.my-post-container{
+  width: 100%;
+  max-width: 800px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.my-post-info{
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-post-info > img{
+  height: 110px;
+  width: 110px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+
+.my-post-info > div{
+  margin: 20px 0 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.my-post-info > div > h5,
+.my-post-info > div > h4{
+  margin: 0;
+  max-height: 30px;
+  overflow: hidden;
+  text-align: start;
+  word-wrap: anywhere;
+}
+
+.my-post-buttons{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.my-post-buttons button,
+.my-post-buttons a{
+  border: none;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.my-post-buttons p{
+  margin: 0 0 0 3px;
+}
+
+.update-button{
+  width: 60%;
+  height: 35px;
+  background-color: #E7F3FF;
+  color: #1377E8;
+}
+
+.update-button:hover{
+  background-color: #DAE6F2;
+}
+
+.delete-button{
+  background-color: #ffe3e3;
+}
+
+.delete-button:hover{
+  background-color: #f1d5d5;
+}
+
+.delete-button .MuiSvgIcon-root{
+  color: #e81313;
+}
+
+.deleting-popup{
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.deleting-popup-container{
+  height: 120px;
+  width: 500px;
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+
+.deleting-popup-buttons{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.deleting-popup-buttons button{
+  border: none;
+  height: 35px;
+  width: 35%;
+  border-radius: 10px;
+}
+
+.deleting-popup-buttons button:hover{
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.popup-delete-button{
+  background-color: #ffd6d6;
+  color: #E81313;
+}
+
+.popup-delete-button:hover{
+  background-color: #ebc1c2 !important;
+}
+
+@media all and (max-width: 900px){
+  .my-post-container{
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  }
+}
