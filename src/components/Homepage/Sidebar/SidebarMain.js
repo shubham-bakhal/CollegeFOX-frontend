@@ -8,7 +8,7 @@ import { CHANGE_PATH } from '../../../store/actionTypes';
 
 function SidebarMain() {
 
-  const [selectedClass, setSelectedClass] = useState({ search: '', all: 'selected-category', myAccount: '', vehicles: '', realEstate: '', freeStuff: '', electronics: '', musicalInstruments: '', gamesAndToys: '', householdSupplies: '', family: '', pets: '', homeDecorationSupplies: '', sports: '', fun: '' })
+  const [selectedClass, setSelectedClass] = useState({ search: '', all: 'selected-category', myAccount: '', vehicles: '', apartments: '', freeStuff: '', computer: '', musicalInstruments: '', gamesAndToys: '', householdSupplies: '', family: '', pets: '', homeDecorationSupplies: '', sports: '', fun: '' })
   const searchValue = useSelector(state => state.search.value);
   const history = useHistory();
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ function SidebarMain() {
   const [chooseCategoryPopup, setChooseCategoryPopup] = useState(false);
 
   const handleCategoryClick = async (e, cat, path = pathHistory.path) => {
-    let categories = { myPosts: '', bookmarks: '', search: '', all: '', myAccount: '', vehicles: '', realEstate: '', freeStuff: '', electronics: '', musicalInstruments: '', gamesAndToys: '', householdSupplies: '', family: '', pets: '', homeDecorationSupplies: '', sports: '', fun: '' };
+    let categories = { myPosts: '', bookmarks: '', search: '', all: '', myAccount: '', vehicles: '', apartments: '', freeStuff: '', computer: '', musicalInstruments: '', gamesAndToys: '', householdSupplies: '', family: '', pets: '', homeDecorationSupplies: '', sports: '', fun: '' };
     categories = { ...categories, [cat]: 'selected-category' }
     setChooseCategoryPopup(false);
     await dispatch({ type: CHANGE_PATH, history: { path, class: cat } })

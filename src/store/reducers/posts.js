@@ -2,8 +2,8 @@ import { ADD_POST, REMOVE_POST, GET_ALL_POSTS, CHANGING_POSTS_FORM, CHANGE_PATH 
 import Cookie from 'js-cookie';
 
 const DEFAULT_STATE = {
-  postsList: { vehicles: [], realEstate: [], freeStuff: [], electronics: [], musicalInstruments: [], gamesAndToys: [], householdSupplies: [], family: [], pets: [], homeDecorationSupplies: [], sports: [], fun: [] },
-  categories: ['Apartments & Flats', 'Free stuff', 'Computer & related'],
+  postsList: {apartments: [], freeStuff: [], computer: [] },
+  categories: ['Apartments', 'Free stuff', 'Computer'],
   postForm: {
     imageUrl: [],
     title: '',
@@ -19,17 +19,17 @@ const DEFAULT_STATE = {
 }
 
 const filteringCategories = (posts) => {
-  const filteredData = { vehicles: [], realEstate: [], freeStuff: [], electronics: [], musicalInstruments: [], gamesAndToys: [], householdSupplies: [], family: [], pets: [], homeDecorationSupplies: [], sports: [], fun: [] }
+  const filteredData = {apartments: [], freeStuff: [], computer: [] }
   posts.forEach(val => {
     switch (val.category[0]) {
-      case 'Apartments & Flats':
-        filteredData.realEstate.push(val);
+      case 'Apartments':
+        filteredData.apartments.push(val);
         break
       case 'Free stuff':
         filteredData.freeStuff.push(val);
         break
-      case 'Electronics' || 'electronics':
-        filteredData.electronics.push(val);
+      case 'Computer':
+        filteredData.computer.push(val);
         break
       default:
         break

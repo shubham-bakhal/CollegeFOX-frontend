@@ -11,6 +11,8 @@ function Main() {
   const categories = useSelector(state => state.posts.categories);
   const searchValue = useSelector(state => state.search.value);
 
+  // console.log(categories)
+
   useEffect(() => {
     if (categories === undefined) return;
     gettingCategories();
@@ -23,9 +25,10 @@ function Main() {
     }
     return a;
   }
-
+ 
   const gettingCategories = () => {
     let filtered = shuffle(categories).filter((val, i) => i < 12);
+    console.log(filtered)
     setCategoriesArray(filtered.map((val, i) => (
       <DisplayByCategory category={val} key={i} numItemsToDisplay="8" />
     )))
@@ -36,9 +39,15 @@ function Main() {
       <Switch>
         <Route exact path="/">{categoriesArray}</Route>
         {/* <Route path="/vehicles"><DisplayByCategory category="Vehicles" numItemsToDisplay="20" /></Route> */}
-        <Route path="/real-estate"><DisplayByCategory category="Apartments & flats" numItemsToDisplay="20" /></Route>
-        <Route path="/free-stuff"><DisplayByCategory category="Free stuff" numItemsToDisplay="20" /></Route>
-        <Route path="/electronics"><DisplayByCategory category="Computer & related" numItemsToDisplay="20" /></Route>
+        <Route path="/real-estate">
+          <DisplayByCategory category="Apartments" numItemsToDisplay="20" />
+        </Route>
+        <Route path="/free-stuff">
+          <DisplayByCategory category="Free stuff" numItemsToDisplay="20" />
+        </Route>
+        <Route path="/computer">
+          <DisplayByCategory category="Computer" numItemsToDisplay="20" />
+        </Route>
         {/* <Route path="/musical-instruments"><DisplayByCategory category="Musical instruments" numItemsToDisplay="20" /></Route> */}
         {/* <Route path="/games-and-toys"><DisplayByCategory category="Games and toys" numItemsToDisplay="20" /></Route>
         <Route path="/household-supplies"><DisplayByCategory category="Household supplies" numItemsToDisplay="20" /></Route>

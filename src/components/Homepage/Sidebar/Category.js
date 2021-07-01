@@ -20,11 +20,11 @@ function Category({ handleCategoryClick, selectedClass }) {
       {/* <Link to="/vehicles" className={selectedClass.vehicles} onClick={e => handleCategoryClick(e, 'vehicles', "/vehicles")}>
         <SidebarElement icon={<DriveEtaIcon />} text='Vehicles' />
       </Link> */}
-      <Link to="/real-estate" className={selectedClass.realEstate} onClick={e => handleCategoryClick(e, 'realEstate', "/real-estate")}>
-        <SidebarElement icon={<HomeWorkIcon />} text='Apartments & Flats' />
+      <Link to="/real-estate" className={selectedClass.apartments} onClick={e => handleCategoryClick(e, 'apartments', "/real-estate")}>
+        <SidebarElement icon={<HomeWorkIcon />} text='Apartments' />
       </Link>
-      <Link to="/electronics" className={selectedClass.electronics} onClick={e => handleCategoryClick(e, 'electronics', "/electronics")}>
-        <SidebarElement icon={<PhoneIphoneIcon />} text='Computer & related' />
+      <Link to="/computer" className={selectedClass.computer} onClick={e => handleCategoryClick(e, 'computer', "/computer")}>
+        <SidebarElement icon={<PhoneIphoneIcon />} text='Computer' />
       </Link>
       <Link to="/free-stuff" className={selectedClass.freeStuff} onClick={e => handleCategoryClick(e, 'freeStuff', "/free-stuff")}>
         <SidebarElement icon={<LocalOfferIcon />} text='Free stuff' />

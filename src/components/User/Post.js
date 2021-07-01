@@ -64,7 +64,7 @@ function Post({ data }) {
       </div>
       <Modal className="deleting-popup" isOpen={modalIsOpen}>
         <div className="deleting-popup-container">
-          <h5 style={{ textAlign: 'center' }}>Are you shure you want to delete post?</h5>
+          <h5 style={{ textAlign: 'center' }}>Are you sure you want to delete this post?</h5>
           <div className="deleting-popup-buttons">
             <button onClick={e => setModalIsOpen(false)}>Cancel</button>
             <button className="popup-delete-button" onClick={e => deletePost(e)}>Delete</button>

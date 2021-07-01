@@ -10,6 +10,7 @@ function DisplayByCategory({ bookmarks, category, numItemsToDisplay }) {
   const bookmarksData = useSelector(state => state.currentUser.user.bookmarks);
   const [post, setPost] = useState([]);
   const numberOfItems = numItemsToDisplay;
+  // console.log(numItemsToDisplay)
 
   useEffect(() => {
     if (posts === {}) return;
@@ -26,7 +27,9 @@ function DisplayByCategory({ bookmarks, category, numItemsToDisplay }) {
         if (index === 0) {
           return val.toLowerCase();
         }
+        // console.log(val,index)
         let str;
+        // console.log(val)
         for (var i = 0; i < val.length; i++) {
           if (i === 0) {
             str = val[i].toUpperCase();
@@ -36,7 +39,13 @@ function DisplayByCategory({ bookmarks, category, numItemsToDisplay }) {
         }
         return str;
       }).join('');
+
+
+      // console.log("post categories = ",posts[gettingCategory])
+
+
       if (posts[gettingCategory] !== undefined) {
+        console.log("posts",posts[gettingCategory])
         setPost(posts[gettingCategory].filter((val, i) => i < numberOfItems).map((val) => (
           <Post data={val} key={val._id} />
         )));
