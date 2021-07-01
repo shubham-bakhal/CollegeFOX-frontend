@@ -4,7 +4,7 @@ import SidebarElement from './SidebarElement';
 // import DriveEtaIcon from '@material-ui/icons/DriveEta';
 import HomeWorkIcon from '@material-ui/icons/HomeWork';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
-import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
+import ComputerIcon from '@material-ui/icons/Computer';
 // import StraightenIcon from '@material-ui/icons/Straighten';
 // import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 // import HomeIcon from '@material-ui/icons/Home';
@@ -24,7 +24,7 @@ function Category({ handleCategoryClick, selectedClass }) {
         <SidebarElement icon={<HomeWorkIcon />} text='Apartments' />
       </Link>
       <Link to="/computer" className={selectedClass.computer} onClick={e => handleCategoryClick(e, 'computer', "/computer")}>
-        <SidebarElement icon={<PhoneIphoneIcon />} text='Computer' />
+        <SidebarElement icon={<ComputerIcon />} text='Computer' />
       </Link>
       <Link to="/free-stuff" className={selectedClass.freeStuff} onClick={e => handleCategoryClick(e, 'freeStuff', "/free-stuff")}>
         <SidebarElement icon={<LocalOfferIcon />} text='Free stuff' />
