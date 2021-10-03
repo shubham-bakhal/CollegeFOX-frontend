@@ -22,7 +22,7 @@
     "redux-thunk": "^2.3.0",
     "validator": "^13.1.1"
   },
-  "proxy": "https://collegefox.herokuapp.com/",
+  "proxy": "http://localhost:4001",
   "secure": false,
   "scripts": {
     "start": "react-scripts start",

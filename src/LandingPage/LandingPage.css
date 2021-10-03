@@ -172,6 +172,7 @@ h1 {
     background-color: transparent;
     border: 1.5px solid #ffffff;
     color: #ffffff;
+    z-index: 99;
 }
 
 .btn-dark:hover {

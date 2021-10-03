@@ -47,7 +47,7 @@ function Post({ data }) {
         <img src={data.imageUrl[0]} alt="err" />
         <div>
           <h4>{data.title}</h4>
-          <h5>{data.price} €</h5>
+          <h5>{data.price} ₹</h5>
         </div>
       </div>
       <div className="my-post-buttons">

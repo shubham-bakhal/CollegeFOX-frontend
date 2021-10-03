@@ -51,7 +51,7 @@ function Post({ data }) {
           </Link>
         </div>
         <div className="card-body">
-          <h5 className="card-title">{data.price} €</h5>
+          <h5 className="card-title">{data.price} ₹ </h5>
           <p className="card-text">{data.title}</p>
           <p className="location">{data.location}</p>
         </div>

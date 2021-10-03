@@ -125,15 +125,21 @@ function PostForm({ update, data }) {
   }
 
   const newPostCallingApi = async (form) => {
-    let post = await axios.post(`/api/users/${currentUser.user.id}/posts/`, form, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-        authorization: `Bearer ${currentUser.user.token}`,
-        'enctype': "multipart/form-data"
-      }
-    })
-    let category = gettingCategory(formData.category)
-    await dispatch({ type: ADD_POST, post: { ...postsList, [category]: [...postsList[category], post.data] } });
+    try {
+      let post = await axios.post(`/api/users/${currentUser.user.id}/posts/`, form, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          authorization: `Bearer ${currentUser.user.token}`,
+          'enctype': "multipart/form-data"
+        }
+      })
+      console.log(post);
+      let category = gettingCategory(formData.category)
+       dispatch({ type: ADD_POST, post: { ...postsList, [category]: [...postsList[category], post.data] } });
+    } catch (error) {
+      console.log(error);
+    }
+    
   }
 
   const updatingPost = async (form) => {

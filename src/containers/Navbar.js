@@ -24,7 +24,6 @@ export default function Navbar() {
       <Link to="/home" className="navbar-brand" onClick={e => dispatch({ type: CHANGE_PATH, history: { path: '/', class: 'all' } })} 
       style={{
         "fontWeight":"700"
-
       }}
       >
         College<span style={{"color":"orangered"}}> Fox </span>
