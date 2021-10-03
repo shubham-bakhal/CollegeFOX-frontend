@@ -1,0 +1,1 @@
+![alt text](https://github.com/smbakhal/CollegeFOX-frontend/blob/main/public/DashBoard.jpg?raw=true)
