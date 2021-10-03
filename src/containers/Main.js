@@ -48,17 +48,17 @@ function Main() {
   return (
     <div>
       <Switch>
-        <Route exact path='/' render={props => (
+        <Route exact path='/dashboard' render={props => (
           isLoggedin ? <Homepage {...props} /> : <Redirect to="/signin" />
           )} />
-          <Route exact path='/home' render={props => (
+          <Route exact path='/' render={props => (
             !isLoggedin ? <LandingPage /> : <Redirect to="/" />
           )} />
         <Route path="/signup" render={props => (
-          isLoggedin ? <Redirect to="/" /> : <AuthForm buttonText="Signup" signup={true} {...props} />
+          isLoggedin ? <Redirect to="/dashboard" /> : <AuthForm buttonText="Signup" signup={true} {...props} />
         )} />
         <Route path="/signin" render={props => (
-          isLoggedin ? <Redirect to="/" /> : <AuthForm buttonText="Log in" signup={false} {...props} />
+          isLoggedin ? <Redirect to="/dashboard" /> : <AuthForm buttonText="Log in" signup={false} {...props} />
         )} />
         <Route path="/create-post" render={props => (
           isLoggedin ? <CreatePost {...props} /> : <Redirect to="/signin" />
